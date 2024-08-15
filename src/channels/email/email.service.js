@@ -39,7 +39,6 @@ const sendEmail = async (to, subject, text, attempt = 1) => {
   } catch (error) {
     console.error(
       `Primary provider failed on attempt ${attempt}:`,
-      // error.message
     );
 
     if (attempt < MAX_RETRIES) {
@@ -59,7 +58,6 @@ const sendEmail = async (to, subject, text, attempt = 1) => {
       } catch (backupError) {
         console.error(
           "Failed to send email via backup provider:",
-          // backupError.message
         );
         throw backupError;
       }

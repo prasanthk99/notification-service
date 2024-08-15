@@ -1,6 +1,3 @@
-// const sendEmail = require('../channels/email/email.service');
-// const emailService = require('../channels/email/email.service');
-
 const sendEmail = require("../channels/email/email.service");
 
 class NotificationService {

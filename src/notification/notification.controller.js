@@ -1,5 +1,4 @@
 const express = require('express');
-// const { sendEmail } = require('./email.service');
 const notificationService = require('./notification.service');
 
 const router = express.Router();
@@ -17,7 +16,6 @@ router.post('/send', async (req, res) => {
     const info = await notificationService.sendNotification(to, subject, text);
     res.status(200).send({
       message: 'Notification sent successfully.',
-      // info: info.messageId
     });
   } catch (error) {
     res.status(500).send({
